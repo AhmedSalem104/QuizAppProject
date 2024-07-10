@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <title>Quiz App </title>
+</head>
+
+<body>
+  <main class="min-vh-100 d-flex flex-column justify-content-center align-items-center">
+    <div class="heading p-4 mb-3 animate__animated animate__flipInX">
+      <h1 class="mb-0">Quiz App</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <form
+          class="start-quiz col-lg-8 offset-lg-2 d-flex flex-column gap-3 animate__animated animate__fadeInBottomLeft"
+          id="QuizOptions">
+          <div class="form-floating">
+            <select class="form-select"  id="categoryMenu" aria-label="category select">
+              <option selected value="" disabled>Select Category</option>
+              <option value="9">General Knowledge </option>
+              <option value="27">Animals </option>
+              <option value="19">Science: Mathematics </option>
+              <option value="18">AnScience: Computers</option>
+              <option value="22">Geography </option>
+            </select>
+            <label for="categoryMenu">Choose Category</label>
+            <div id="categoryMenuAlert" class="alert alert-danger mt-1 d-none">
+              <ul class="p-0 m-0 ps-3">
+                  <li>Category must`t Empty</li>
+               
+        
+              </ul>
+          </div>
+          </div>
+        
+
+          <div class="form-floating">
+            <select class="form-select" id="difficultyOption" aria-label="difficulty select">
+
+              <option selected value="easy">Easy </option>
+              <option value="medium">Medium </option>
+              <option value="hard">Hard </option>
+
+            </select>
+            <label for="difficultyOption">Choose Difficulty Level</label>
+            <div id="difficultyOptionAlert" class="alert alert-danger mt-1 d-none">
+              <ul class="p-0 m-0 ps-3">
+                <li>Difficulty must`t Empty</li>
+          
+        
+              </ul>
+          </div>
+          </div>
+        
+
+
+          <div class="form-floating">
+            <input  required type="number" class="form-control" id="QuestionsNumber" placeholder="Number of Questions">
+            <label for="QuestionsNumber">Number of Questions</label>
+            <div id="QuestionsNumberAlert" class="alert alert-danger mt-1 d-none">
+              <ul class="p-0 m-0 ps-3">
+                  <li>QuestionsNumber must`t Empty</li>
+                  <li>QuestionsNumber range 1 - 20</li>
+              </ul>
+          </div>
+          </div>
+        
+          <button class="btn btn-start btn-primary" type="button" id="startQuiz">Start Quiz</button>
+
+        </form>
+      </div>
+    </div>
+    <div class="Questions bg-white ">
+      <div class="container w-100  ">
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js" type="module"> </script>
+</body>
+
+</html>
